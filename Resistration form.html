@@ -1,37 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title align="center">registration form </title>
-    <style>
-
-    </style>
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
-    <h1 align="center">REGISTRATION FORM</h1>
-    <form action="resg.html" method="post" align="center">
-        <label for="name"><b>Name:</b></label>
-        <input type="text" id="name" name="name" required><br><br>
-        <input type="radio" id="male" name="gender" value="male" required>
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female" required>
-        <label for="female">Female</label><br><br>
+    <div>
+        <h1>Contact Form</h1>
+        <p id="Subheading">Please fill all the text in the fields.</p>
+    </div>
+    <form action="">
 
-        <label for="email"><b>Email:</b></label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="password"><b>Password:</b></label>
-        <input type="password" id="password" name="password" required><br><br>
-
-        <label for="confirm-password"><b>Confirm Password:</b></label>
-        <input type="password" id="confirm-password" name="confirm-password" required><br><br>
-        <input type="submit" value="Register" style="background-color: red; color: white; padding: 10px 20px; border: none; cursor: pointer;">
-
+        <p class="name">
+            Your Name:<br>
+            <input type="text" placeholder="Your Full Name">
+        </p>
+        <p class="email"> Your Email:<br>
+            <input type="email" name="email" id="" placeholder="Enter your Email">
+        </p>
+        <p class="number">
+            Your mobile number:<br>
+            <input type="text" placeholder="Enter your mobile number">
+        </p>
+        <p class="message">
+            Your message to us:<br>
+            <textarea name="message" id="" cols="50" rows="5" placeholder="Enter your query here"></textarea>
+        </p>
+        <p>Select how you want updates:<br>
+            <select name="Select" id="">
+                <option value="Choose">--Please choose one option--</option>
+                <option value="op1">Message</option>
+                <option value="op2">Call</option>
+                <option value="op3">Email</option>
+            </select>
+        </p>
+        <input type="submit" value="Submit"> <input type="reset" value="Reset">
     </form>
-
-
-
 </body>
 
 </html>
