@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #b {
+            background-color: lightblue;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            margin: 0 auto;
+        }
+        
+        #name {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        #b h1 {
+            margin-bottom: 20px;
+            color: red;
+        }
+        
+        #b label {
+            margin-bottom: 5px;
+        }
+        
+        body {
+            background-color: lightyellow;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div id="b" align="centre">
+        <h1 color="red">Emi Calculator</h1>
+        <label>name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+        <label>occupation</label>
+        <input type="text" id="occupation" name="occupation" placeholder="Enter your occupation" required><br><br>
+
+        <label>enter principal amount </label>
+        <input type="number" id="principal" name="principal" required><br><br>
+        <label>enter rate of interest </label>
+        <input type="number" id="rate" name="rate" required><br>
+        <label> enter time peroid </label>
+        <input type="number" id="time" name="time" required><br><br>
+        <button onclick="emicalculator()" align="right" target="_self"><h5 color="red">calculate</h5></button>
+        <button onclick="resetForm()" align="right" target="_self"><h5 color="red">reset</h5></button>
+
+        <br><br>
+
+
+    </div>
+
+
+
+    <script>
+        function emicalculator() {
+            var principal = document.getElementById("principal").value;
+            var rate = document.getElementById("rate").value;
+            var time = document.getElementById("time").value;
+
+            var emi = (principal * rate * time) / 100;
+            var name = document.getElementById("name").value;
+            document.getElementById("b").innerHTML += "Name: " + name + "-> EMI: " + emi + "<br>";
+        }
+
+        function resetForm() {
+            document.getElementById("principal").value = "";
+            document.getElementById("rate").value = "";
+            document.getElementById("time").value = "";
+            document.getElementById("b").innerHTML = "";
+        }
+    </script>
+
+</body>
+
+</html>
